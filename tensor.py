@@ -1,6 +1,9 @@
 import os
 import numpy as np
 import tensorflow as tf
+import random as rd
+import pandas as pd
+import csv
 
 # I use this line to suppress warnings, tensorflow tells me that my machine can run tensorflow faster with some configuration.
 # This line is not necessary but makes the output cleaner
@@ -34,10 +37,30 @@ def main():
       y=np.array(training_set.target),
       num_epochs=None,
       shuffle=True)
+  
+  IRIS_data = "IRIS_data.csv"
+  irisd = pd.read_csv(IRIS_data, delimiter=',')
+  irisd = irisd.values
+  print(irisd)
+
+  # Mix up data so we can test our training set
+  train_input_fn.train.shuffle_batch()
+  print("Shuffled:")
+  print(train_input_fn)
+  sp1, sp2 = train_input_fn.split()
+
+  # Split our mixed up IRIS data into training and testing
+  train_data = irisd[:50]
+  test_data = irisd[50:]
 
   # Train model.
   print("Training model..")
   classifier.train(input_fn=train_input_fn, steps=2000)
+
+  #print("Train shuffled and split")
+  #print(train_data)
+  #print("Test shuffled and split")
+  #print(test_data)
 
 if __name__ == "__main__":
     main()
