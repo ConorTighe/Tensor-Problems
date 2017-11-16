@@ -2,7 +2,6 @@ import os
 import numpy as np
 import tensorflow as tf
 import random as rd
-import pandas as pd
 import csv
 
 # I use this line to suppress warnings, tensorflow tells me that my machine can run tensorflow faster with some configuration.
@@ -20,6 +19,7 @@ def main():
       target_dtype=np.int,
       features_dtype=np.float32)
 
+  
   # Prepare data for modeling by checking the columns with tf.feature_column.numeric_column.
   # We have the Petal length + width and the Speal length + width so we set the shape to 4 since there are 4 columns to feature
   print("Checking values..")
@@ -30,6 +30,16 @@ def main():
                                           hidden_units=[10, 20, 10],
                                           n_classes=3,
                                           model_dir="Model")
+
+  IRIS_data = "IRIS_data.csv"
+  with open(IRIS_data, 'w', newline='') as data:
+    wr = csv.writer(data, quoting=csv.QUOTE_ALL)
+    with open(IRIS, newline='') as f:
+        for line in f:
+            print(line)
+            writeData = csv.writer(data, delimiter=',')
+            writeData.writerow(line)
+
   # Define the training inputs
   print("Preparing training with inputs..")
   train_input_fn = tf.estimator.inputs.numpy_input_fn(
@@ -38,20 +48,14 @@ def main():
       num_epochs=None,
       shuffle=True)
   
-  IRIS_data = "IRIS_data.csv"
-  irisd = pd.read_csv(IRIS_data, delimiter=',')
-  irisd = irisd.values
-  print(irisd)
-
-  # Mix up data so we can test our training set
-  train_input_fn.train.shuffle_batch()
-  print("Shuffled:")
-  print(train_input_fn)
-  sp1, sp2 = train_input_fn.split()
+  #IRIS_data = "IRIS_data.csv"
+  #irisd = pd.read_csv(IRIS_data, delimiter=',')
+  #irisd = irisd.values
+  #print(irisd)
 
   # Split our mixed up IRIS data into training and testing
-  train_data = irisd[:50]
-  test_data = irisd[50:]
+  #train_data = irisd[:50]
+  #test_data = irisd[50:]
 
   # Train model.
   print("Training model..")
