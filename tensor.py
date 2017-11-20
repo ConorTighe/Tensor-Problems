@@ -7,7 +7,7 @@ import pandas as pd
 # This line is not necessary but makes the output cleaner
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
-# IRIS data URI set up
+# IRIS data file name set up
 IRIS = "IRIS.csv"
 
 def main():
