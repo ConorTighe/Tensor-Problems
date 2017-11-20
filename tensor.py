@@ -1,17 +1,14 @@
 import os
 import numpy as np
 import tensorflow as tf
-import random as rd
 import pandas as pd
-import csv
 
 # I use this line to suppress warnings, tensorflow tells me that my machine can run tensorflow faster with some configuration.
 # This line is not necessary but makes the output cleaner
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
-# IRIS data set
+# IRIS data URI set up
 IRIS = "IRIS.csv"
-IRIS_data = "IRIS_data.csv"
 
 def main():
   # Load data from csv.
@@ -28,11 +25,6 @@ def main():
                                           hidden_units=[10, 20, 10],
                                           n_classes=3,
                                           model_dir="Model")
-
-  with open(IRIS, 'r', newline='') as f, open(IRIS_data, 'w', newline='') as data:
-    next(f)  
-    writer = csv.writer(data, delimiter=',', quoting=csv.QUOTE_ALL)
-    writer.writerows(line.split(',') for line in f)
   
   # Display the full dataset to the user and
   # Split our mixed up IRIS data into training and testing
