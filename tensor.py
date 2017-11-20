@@ -30,8 +30,8 @@ def main():
   # Split our mixed up IRIS data into training and testing
   print("Full data:")
   print(fulldata)
-  training_set = pd.read_csv(IRIS, header=None, nrows=60)
-  test_set = pd.read_csv(IRIS, header=None, skiprows=60, nrows=121, names = ["61", "4", "setosa", "versicolor", "virginica"])
+  training_set = pd.read_csv(IRIS, header=None, nrows=100)
+  test_set = pd.read_csv(IRIS, header=None, skiprows=100, nrows=151, names = ["100", "4", "setosa", "versicolor", "virginica"])
 
   # Set the file name for both CSV
   train_data = "trainIRIS.csv"
