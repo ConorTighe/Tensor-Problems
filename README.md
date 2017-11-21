@@ -51,6 +51,6 @@ This program uses machine learning through tensor flow to identify flowers based
 - Conclusion
 
 ### References:
-    - https://www.tensorflow.org/get_started/estimator
-    - https://stackoverflow.com/questions/32206661/selecting-only-certain-rows-while-opening-text-file-in-pandas
-    - https://deeplearning4j.org/neuralnet-overview
+- https://www.tensorflow.org/get_started/estimator
+- https://stackoverflow.com/questions/32206661/selecting-only-certain-rows-while-opening-text-file-in-pandas
+- https://deeplearning4j.org/neuralnet-overview
