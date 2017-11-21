@@ -16,14 +16,27 @@ If you are running the jupyter notebook version instead install the following li
 
 The file should be avalible in the jupyter app window then.
 
-## IRIS:
-Originally published at UCI Machine Learning Repository: Iris Data Set, this small dataset from 1936 is often used for testing out machine learning algorithms and visualizations. Each row of the table represents an iris flower, including its species and dimensions of its botanical parts, sepal and petal, in centimeters.
+---
 
-## Includes:
-- Numpy: We import this library for complex math equations and for multi-dimensional arrays and matrices that the library allows us to use, these will be useful when manipulating our data.
-- Tensorflow: Import tensorflow for machine learning algorithms.
-- Pandas: This is a library for mainpulating csvs and is what we will use to seperate the data. 
-- Jupyter: An application that allows you to create and share documents containing code in a easy to read format.
+### IRIS:
+Originally published at UCI Machine Learning Repository: Iris Data Set, this small dataset from 1936 is often used for testing out machine learning algorithms and visualizations. Each row of the table represents an iris flower, including its species and dimensions of its botanical parts, sepal and petal, in centimeters.
+[More here](https://archive.ics.uci.edu/ml/datasets/iris)
+
+### Numpy: 
+This is a python library for complex math equations and for multi-dimensional arrays and matrices. This libray is often used with tensorflow as it makes some calculations required in machine learning much easier and less time consuming.
+[More here](http://www.numpy.org/)
+
+### Tensorflow: 
+This is a programming library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them.
+[More here](https://www.tensorflow.org/)
+
+### Pandas: 
+This is a library for creating data structures and using data analysis tools with Python. It is one of the most popular libraries for retrieving and saving data to a CSV.
+[More here](https://pandas.pydata.org/)
+
+### Jupyter: 
+An application that allows you to create and share documents containing code in a easy to read format, making sharing code documentation with others simple and efficent.
+[More here](http://jupyter.org/)
     
 ---
 
