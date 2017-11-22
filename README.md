@@ -18,6 +18,8 @@ The file should be avalible in the jupyter app window then.
 
 ---
 
+# Requirements:
+
 ### IRIS:
 Originally published at UCI Machine Learning Repository: Iris Data Set, this small dataset from 1936 is often used for testing out machine learning algorithms and visualizations. Each row of the table represents an iris flower, including its species and dimensions of its botanical parts, sepal and petal, in centimeters.
 [More here](https://archive.ics.uci.edu/ml/datasets/iris)
@@ -42,6 +44,9 @@ An application that allows you to create and share documents containing code in 
 
 # Summary:
 This program uses machine learning through tensor flow to identify flowers based on the IRIS dataset. First we import the dataset using pandas read_csv without headers because we already have our own ones made within the csv. We then create the feature columns for the model and set the shape as 4 since there are 4 columns our model will use. A DNNClassifier Model is created for comparing our dataset to and testing its accuacy. We then print the whole dataset to the user before using pandas to split the dataset in half. Once the dataset is split we save the training and testing sets to there own csvs. We then use the csvs to create seperate datasets and input. After testing these we compare the test to our model and print the accuracy. It should print out a result between 0.9-1.0. Then we use the test set to predict the type of flowers in the data.
+
+## Deep Neural Networks
+Neural networks are a set of algorithms, modeled loosely after the human brain, that are designed to recognize patterns. They interpret sensory data through a kind of machine perception, labeling or clustering raw input. The patterns they recognize are numerical, contained in vectors, into which all real-world data, be it images, sound, text or time series, must be translated.
 
 ### Notebook headers:
 - Use Tensorflow to create model.
